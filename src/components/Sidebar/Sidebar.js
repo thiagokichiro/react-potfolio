@@ -6,9 +6,9 @@ import { StyledSideNav, CustomSideNavItems } from './styles';
 
 const items = [
   { name: 'Me', path: '/', icon: User32 },
-  { name: 'Projects', path: '/projects', icon: Code32 },
-  { name: 'Work', path: '/work', icon: Enterprise32 },
   { name: 'Education', path: '/education', icon: Education32 },
+  { name: 'Work', path: '/work', icon: Enterprise32 },
+  { name: 'Projects', path: '/projects', icon: Code32 },
   { name: 'Contact', path: '/contact', icon: Email32 },
 ];
 
@@ -18,7 +18,7 @@ const Sidebar = () => {
   return (
     <StyledSideNav expanded={false} isChildOfHeader={false} aria-label="Side navigation">
       <CustomSideNavItems>
-        {items.map(i => (
+        {items.map((i) => (
           <SideNavLink
             renderIcon={i.icon}
             isActive={
